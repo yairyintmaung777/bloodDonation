@@ -39,7 +39,7 @@ public class login extends AppCompatActivity {
 
                 Boolean loginSuccessful = dbHelper.checkLogin(lgEmail, lgPass);
                 if (lgEmail.equals(a)  && lgPass.equals(b) ){
-                    Intent intent = new Intent(getApplicationContext(), ThingToDo.class);
+                    Intent intent = new Intent(getApplicationContext(), UserListActivity.class);
                     startActivity(intent);
                 }
                 else {

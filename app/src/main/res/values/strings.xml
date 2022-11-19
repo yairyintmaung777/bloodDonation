@@ -46,7 +46,7 @@
         <item>O+</item>
         <item>O-</item>
     </array>
-    
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -64,7 +64,7 @@
     <string name="submit">Submit</string>
     <string name="message">Please Select the Date and Time!!</string>
     <string name="Uname">Jake Jason Jin</string>
-    
+
     <string name="before_donate">
         \n1. Check the National Blood Centre site to register, ensure you meet the criteria and know the nearest blood donation site to you.
         \n\n2. Be well rested with at least five hours of sleep.
