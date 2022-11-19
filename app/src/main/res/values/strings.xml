@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">Blood Donation Application</string>
+    <string name="blood_donation_inti">Blood Donation INTI</string>
+    <string name="_2022">2022</string>
+    <string name="create_a_new_account">Create A New Account</string>
+    <string name="I_log_in">Log In</string>
+    <string name="appointment_form">Appointment Form</string>
+    <string name="centre_listiening">Centre Listiening</string>
+
+    <string name="S1">Address:\nLevel 5, Subang Jaya Medical Centre (North Tower Annex Block 1 Jalan SS12/1A, 47500 Subang Jaya, Selangor\n\nPhone: 03–5639 1575</string>
+    <string name="S2">Address:\nB2, New Wing, Lebuh Bandar Utama, Bandar Utama, 47800 Petaling Jaya, Selangor\n\nPhone: 03–26132688</string>
+    <string name="S3">Address:\nMid Valley Megamall, T–063, 3rd floor Mezzanine, Lingkaran Syed Putra, 59200 Kuala Lumpur\n\nPhone: 03–2280 0349</string>
+    <string name="N1">Address:\nUnnamed Road, Bukit Rasah, 70300 Seremban, Negeri Sembilan\n\nPhone: 06–768 4309</string>
+    <string name="N2">Address:\nBukit Rasah, 70300 Seremban, Negeri Sembilan\n\nPhone: 06–768 3055</string>
+    <string name="J1">Address:\nJalan Mahmoodiah, 80100 Johor Bahru, Johor\n\nPhone: 07–220 0169</string>
+    <string name="J2">Address:\nJalan Mahmoodiah, Kampung Mahmoddiah, 80000 Johor Bahru, Johor\n\nPhone: 07–220 0169</string>
+    <string name="J3">Address:\nJalan, Persiaran Abu Bakar Sultan, 80000 Johor Bahru, Johor\n\nPhone: 07–225 7000</string>
+
+
+    <array name="State">
+        <item>Selangor</item>
+        <item>Negeri Sembilan</item>
+        <item>Johor</item>
+    </array>
+    <array name="Selangor">
+        <item>Blood Donation Centre,Subang Jaya</item>
+        <item>Pusat Darah Negara 1 Utama,Petaling Jaya</item>
+        <item>Pusat Darah Negara Midvalley Donation Suite,Kuala Lumpur</item>
+    </array>
+    <array name="Negeri_Sembilan">
+        <item>Pusat Derma Darah Hospital Tuanku Jaafar</item>
+        <item>Kompleks Unit Rawatan Harian (Ambulatory Care Complex), Hospital Tuanku Ja afa</item>
+    </array>
+    <array name="Johor">
+        <item>Pusat Pendermaan Darah Hospital Sultanah Aminah</item>
+        <item>Department of Transfusion Medicine, Sultanah Aminah Hospital</item>
+        <item>Sultanah Aminah Hospital, Johor Bahru</item>
+    </array>
+    <array name="bloos_type">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </array>
+    
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="datepicker" />
+    <string name="date">\"Date: \"</string>
+    <string name="information_of_the_centre">Information of The Centre</string>
+    <string name="linie">____________________________________________________</string>
+    <string name="select_your_state">Select Your State : -</string>
+    <string name="centre_listing">Centre Listing</string>
+    <string name="select_a_blood_donor_centre">Select a Blood Donor Centre: -</string>
+    <string name="appointment_apply_form">Appointment Apply Form</string>
+    <string name="select_your_statess">Select Your State : -</string>
+    <string name="select_a_blood_donor_centres">Select a Blood Donor Centre: -</string>
+    <string name="please_select_a_date_and_time">Please Select A Date and Time :</string>
+    <string name="submit">Submit</string>
+    <string name="message">Please Select the Date and Time!!</string>
+    <string name="Uname">Jake Jason Jin</string>
+    
+    <string name="before_donate">
+        \n1. Check the National Blood Centre site to register, ensure you meet the criteria and know the nearest blood donation site to you.
+        \n\n2. Be well rested with at least five hours of sleep.
+        \n\n3. Stay hydrated by drinking at least eight glasses of water a day.
+        \n\n4. If you are a former Covid-19 patient, you will only be allowed to donate blood 14 days after recovery.
+        \n\n5. Vaccine recipients without adverse events following immunisation (AEFI) may donate blood seven days after their vaccination appointment. Those who experience AEFI can donate after seven days of recovery.\n
+    </string>
+    <string name="on_dayBefore">
+        \n1. Have a meal four hours before your appointment.
+        \n\n2. Wear comfortable clothing. For those wearing long sleeves, ensure they can be folded up until the upper part of your arm.
+        \n\n3. Bring along your identity card, driver’s licence or passport for registration and identification purposes.
+        \n\n4. Drink enough water while waiting your turn to donate blood. You will have your finger pricked to test your blood group and hemoglobin levels.
+        \n\n5. Any questions can be directed to a healthcare professional during your consultation session before the donation. The actual blood drawing process will only take up to 10 minutes.
+        \n
+    </string>
+    <string name="things_to_do_before_donation">Things To Do Before Donation</string>
+    <string name="user_profile">User Profile</string>
+    <string name="donate_blood_save_life">Donate Blood, Save Life</string>
+    <string name="inti_2022">INTI 2022</string>
+    <string name="blood_donation">Blood Donation</string>
+    <string name="login">login</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="don_t_have_account_yet">Don\'t have account yet?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="please_enter_your_name">Please Enter Your Name</string>
+    <string name="email_signIn">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="sign_up_SignIn">Sign Up</string>
+    <string name="blood_donation_SignIn">Blood Donation</string>
+    <string name="register">Register</string>
+    <string name="create_password">Create Password</string>
+    <string name="already_have_account">Already Have Account?</string>
+    <string name="address">Address</string>
+    <string name="blood_type">Blood Type :</string>
+    <string name="a_guide_to_donating_blood">A guide to Donating Blood</string>
+    <string name="before_donating">Before Donating :</string>
+    <string name="on_the_day_of_your_donation">On the Day of your Donation:</string>
+    <string name="view_appointment">View Appointment</string>
+    <string name="name">Name</string>
+    <string name="centre">Centre</string>
+    <string name="textview">TextView</string>
+    <string name="textview_appointment">TextView</string>
+
+
+</resources>
