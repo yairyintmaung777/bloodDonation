@@ -66,15 +66,15 @@
 
     <TextView
         android:id="@+id/tvdnt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="221dp"
+        android:layout_height="21dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:text="@string/please_select_a_date_and_time"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/centreSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <ImageButton
         android:id="@+id/btDate"
@@ -135,5 +135,23 @@
         android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@+id/btTime"
         app:layout_constraintTop_toBottomOf="@+id/et_Date" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Blood Type :"
+        app:layout_constraintStart_toStartOf="@+id/centreSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/centreSpinner" />
+
+    <Spinner
+        android:id="@+id/Bloodspinner"
+        android:layout_width="148dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="10dp"
+        android:entries="@array/bloos_type"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,9 +9,9 @@
 
     <Button
         android:id="@+id/btAppointmentForm"
-        android:layout_width="170dp"
+        android:layout_width="108dp"
         android:layout_height="201dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="15dp"
         android:backgroundTint="@color/black"
         android:drawableTop="@mipmap/blood_donor_foreground"
         android:onClick="OnAddAppointment"
@@ -28,21 +28,41 @@
         app:layout_constraintVertical_bias="0.081" />
 
     <Button
-        android:id="@+id/btCentre"
-        android:layout_width="170dp"
-        android:layout_height="201dp"
-        android:layout_marginStart="12dp"
+        android:id="@+id/btViewAppointment"
+        android:layout_width="99dp"
+        android:layout_height="200dp"
         android:backgroundTint="@color/black"
-        android:drawableTop="@mipmap/pin_foreground"
-        android:onClick="OnCentreListing"
-        android:paddingBottom="29dp"
-        android:text="@string/centre_listiening"
+        android:drawableTop="@drawable/ic_viewappointment_foreground"
+        android:onClick="OnGoViewAppointment"
+        android:paddingTop="1dp"
+        android:paddingBottom="33dp"
+        android:text="View Appointment"
         android:textAllCaps="false"
         android:textSize="16sp"
         android:textStyle="bold"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btCentre"
         app:layout_constraintStart_toEndOf="@+id/btAppointmentForm"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintVertical_bias="0.084" />
+
+    <Button
+        android:id="@+id/btCentre"
+        android:layout_width="116dp"
+        android:layout_height="199dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/black"
+        android:drawableTop="@mipmap/pin_foreground"
+        android:onClick="OnCentreListing"
+        android:paddingBottom="29dp"
+        android:text="@string/centre_listing"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5"
         app:layout_constraintVertical_bias="0.081" />
 

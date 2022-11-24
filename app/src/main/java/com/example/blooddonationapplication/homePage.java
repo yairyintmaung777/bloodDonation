@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.se.omapi.Session;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class homePage extends AppCompatActivity {
 
     TextView Tv;
+    DatabaseHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +20,7 @@ public class homePage extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
         //Tv = findViewById(R.id.textView8);
         //Tv.setText(str1);
+
     }
 
     public void homeToUser(View view) {
@@ -43,6 +47,9 @@ public class homePage extends AppCompatActivity {
 
     public void OnAddAppointment(View view) {
         Intent intent = new Intent(this,AppointmentForm.class);
+        Intent gettingIntent = getIntent();
+        final String name = gettingIntent.getStringExtra("uname");
+        intent.putExtra("uname",name);
         startActivity(intent);
     }
 
@@ -54,5 +61,21 @@ public class homePage extends AppCompatActivity {
     public void OnThingToDo(View view) {
         Intent intent = new Intent(this,ThingToDo.class);
         startActivity(intent);
+    }
+
+    public void OnGoViewAppointment(View view) {
+        Intent gettingIntent = getIntent();
+        String name = gettingIntent.getStringExtra("uname");
+        dbHelper = new DatabaseHelper(this);
+        Boolean gotAppointment = dbHelper.checkAppointment(name);
+
+        if(gotAppointment){
+        Intent intent = new Intent(this,ViewAppointment.class);
+        intent.putExtra("uname",name);
+        startActivity(intent);
+        }else{
+            Toast.makeText(getApplicationContext(),"There is no Appointment for You!",Toast.LENGTH_SHORT).show();
+        }
+
     }
 }

@@ -71,7 +71,7 @@
         android:layout_marginTop="120dp"
         android:drawableStart="@drawable/ic_baseline_email_24"
         android:ems="10"
-        android:hint="@string/email"
+        android:hint="Username"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         android:textColor="@color/white"

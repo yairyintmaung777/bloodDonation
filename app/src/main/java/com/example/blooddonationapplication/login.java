@@ -39,13 +39,14 @@ public class login extends AppCompatActivity {
 
                 Boolean loginSuccessful = dbHelper.checkLogin(lgEmail, lgPass);
                 if (lgEmail.equals(a)  && lgPass.equals(b) ){
-                    Intent intent = new Intent(getApplicationContext(), UserListActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), adminHomepage.class);
                     startActivity(intent);
                 }
                 else {
                     if(loginSuccessful) {
                         displayToast("Login Successful!");
                         Intent intent = new Intent(getApplicationContext(), homePage.class);
+                        intent.putExtra("uname",lgEmail);
                         startActivity(intent);
                     }
                     else{

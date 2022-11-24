@@ -63,7 +63,5 @@ public class UpdateUserActivity extends AppCompatActivity {
 
         });
 
-
-
     }
 }

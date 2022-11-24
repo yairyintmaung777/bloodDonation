@@ -1,5 +1,6 @@
 package com.example.blooddonationapplication;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,14 +10,15 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
 public class AppointmentForm extends AppCompatActivity {
 
-    String StateSelect, centreSelect, Timemessage, DateMessage;
-    private Spinner StateSpinner, centreSpinner;
-
+    String name, StateSelect, centreSelect, bloodtype,Timemessage, DateMessage;
+    private Spinner StateSpinner, centreSpinner,BloodTypeSpin;
+    DatabaseHelper dbHelper;
     EditText ET_Date;
     EditText ET_Time;
 
@@ -24,9 +26,12 @@ public class AppointmentForm extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appointment_form);
-
+        dbHelper= new DatabaseHelper(AppointmentForm.this);
         centreSpinner = findViewById(R.id.centreSpinner);
         centreSpinner.getResources().getStringArray(R.array.Negeri_Sembilan);
+        BloodTypeSpin = findViewById(R.id.Bloodspinner);
+
+
 
         ArrayAdapter<CharSequence> SelangorAdapter = ArrayAdapter.createFromResource(this, R.array.Selangor,
                 android.R.layout.simple_spinner_item);
@@ -81,6 +86,18 @@ public class AppointmentForm extends AppCompatActivity {
             }
         });
 
+        BloodTypeSpin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                bloodtype = BloodTypeSpin.getSelectedItem().toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
 
     }
 
@@ -120,19 +137,41 @@ public class AppointmentForm extends AppCompatActivity {
 
 
     public void OnSubmit(View view) {
+        AlertDialog.Builder myAlertBuilder = new AlertDialog.Builder(AppointmentForm.this);
+        myAlertBuilder.setTitle(R.string.alert_title);
+        myAlertBuilder.setMessage(R.string.alert_message);
         String message = getString(R.string.message);
-        if (DateMessage == null || Timemessage == null) {
-            Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
-        } else {
-            Intent intent = new Intent(getApplicationContext(), ViewAppointment.class);
+        Intent intent = getIntent();
+        name = intent.getStringExtra("uname");
 
-            intent.putExtra("centre", centreSelect);
-            intent.putExtra("date", DateMessage);
-            intent.putExtra("time", Timemessage);
-            Toast.makeText(this, "Appointment Submitted!!", Toast.LENGTH_SHORT).show();
-            startActivity(intent);
+        myAlertBuilder.setPositiveButton("OK", new
+                DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // User clicked the OK button.
 
+                        if (DateMessage == null || Timemessage == null) {
+                            Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+                        } else {
+                            dbHelper.insertAppointment(name, StateSelect, centreSelect, DateMessage, Timemessage, bloodtype);
+                            Toast.makeText(getApplicationContext(), "Successful to Submit the Appointment!!",
+                                    Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplicationContext(), homePage.class);
+                            intent.putExtra("uname",name);
+                            startActivity(intent);
 
-        }
+                        }
+                    }
+                });
+        myAlertBuilder.setNegativeButton("Cancel", new
+                DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // User cancelled the dialog.
+                        Toast.makeText(getApplicationContext(), "Pressed Cancel",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+        // Create and show the AlertDialog.
+        myAlertBuilder.show();
+
     }
 }
